@@ -1,0 +1,14 @@
+package com.merge;
+
+public class Merge {
+
+	public static void main(String[] args) {
+		int[] a= {21,1,32,9,89,-2,-32};
+		int len = a.length/2;
+		sort(a,0,len);
+		for(int i:a) {
+			System.out.println(i+",");
+		}
+	}
+
+}

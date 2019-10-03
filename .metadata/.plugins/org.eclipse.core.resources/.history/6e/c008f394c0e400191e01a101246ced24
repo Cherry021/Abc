@@ -1,0 +1,24 @@
+package com.config;
+
+import javax.sql.DataSource;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
+
+public class MysqlConfig {
+	@Value("${app.datasource.driverClassName}") String driverClassName;
+	@Value("${app.datasource.url}") String url;
+	@Value("${app.datasource.username}") String us;
+	@Value("${app.datasource.password}") String ps;
+	DataSource ds = DataSourceBuilder.create().driverClassName(driverClassName).url(url).username(us).password(ps).build();
+			
+	@Bean("sessionFactory")
+	public SessionFactory getLocalSession(DataSource ds) {
+		LocalSessionFactoryBuilder sb = new LocalSessionFactoryBuilder(ds);
+		sb.scanPackages("com");
+		return sb.buildSessionFactory();
+	}
+}

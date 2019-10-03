@@ -1,0 +1,12 @@
+package com;
+
+public class ssss {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=10,a;
+		a=i++/++i;
+		System.out.println(a);
+	}
+
+}

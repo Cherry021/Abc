@@ -1,0 +1,13 @@
+package com;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Conn {
+
+	public static void main(String[] args) {
+		Class.forName();
+		Connection c = DriverManager.get
+	}
+
+}

@@ -1,0 +1,4 @@
+app.datasource.driverClassName=com.mysql.jdbc.Driver
+app.datasource.url=jdbc:mysql://localhost:3306/db
+app.datasource.username=root
+app.datasource.password=YOGA6906

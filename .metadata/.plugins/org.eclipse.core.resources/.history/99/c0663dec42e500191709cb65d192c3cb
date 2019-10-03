@@ -1,0 +1,7 @@
+package com.implies;
+
+import com.entity.User;
+
+public interface ConService {
+String getUser(long id);
+}
